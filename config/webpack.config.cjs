@@ -424,6 +424,7 @@ module.exports = function (webpackEnv) {
                   isEnvDevelopment &&
                     shouldUseReactRefresh &&
                     require.resolve('react-refresh/babel'),
+                    '@babel/plugin-syntax-import-assertions'
                 ].filter(Boolean),
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -450,6 +451,7 @@ module.exports = function (webpackEnv) {
                     { helpers: true },
                   ],
                 ],
+                plugins: ["@babel/plugin-syntax-import-assertions"],
                 cacheDirectory: true,
                 // See #6846 for context on why cacheCompression is disabled
                 cacheCompression: false,
