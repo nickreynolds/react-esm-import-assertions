@@ -1,7 +1,6 @@
 describe('Ok', () => {
     beforeAll(async () => {
         await page.goto('http://localhost:3000')
-        console.log("page: ", page)
     })
 
     it('Finds Import Assertion', async () => {
