@@ -1,6 +1,11 @@
 {
   "name": "react-esm-import-assertions",
-  "keywords": ["ESM", "Module", "React", "Import Assertions"],
+  "keywords": [
+    "ESM",
+    "Module",
+    "React",
+    "Import Assertions"
+  ],
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -107,9 +112,9 @@
     ],
     "testEnvironment": "jsdom",
     "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.cjs",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.cjs",
+      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.cjs"
     },
     "transformIgnorePatterns": [
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
@@ -141,10 +146,15 @@
   "babel": {
     "presets": [
       "react-app",
-      "@babel/preset-env"    
+      "@babel/preset-env"
     ],
     "plugins": [
       "@babel/plugin-syntax-import-assertions"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest-puppeteer": "^6.1.1",
+    "puppeteer": "^17.1.3"
   }
 }
