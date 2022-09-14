@@ -1,5 +1,5 @@
 'use strict';
-
+console.log("i'm babble")
 const babelJest = require('babel-jest').default;
 
 const hasJsxRuntime = (() => {
@@ -16,13 +16,12 @@ const hasJsxRuntime = (() => {
 })();
 
 module.exports = babelJest.createTransformer({
-  presets: [
-    [
-      require.resolve('babel-preset-react-app'),
-      {
-        runtime: hasJsxRuntime ? 'automatic' : 'classic',
-      },
-    ],
+  "presets": [
+    "react-app",
+    "@babel/preset-env"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-import-assertions"
   ],
   babelrc: false,
   configFile: false,

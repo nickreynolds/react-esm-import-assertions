@@ -1,5 +1,5 @@
 'use strict';
-
+console.log("go get env.cjs")
 const fs = require('fs');
 const path = require('path');
 const paths = require('./paths.cjs');
@@ -88,7 +88,7 @@ function getClientEnvironment(publicUrl) {
         // Whether or not react-refresh is enabled.
         // It is defined here so it is available in the webpackHotDevClient.
         FAST_REFRESH: process.env.FAST_REFRESH !== 'false',
-        JEST_PUPPETEER_CONFIG: "jest-puppeteer.config.cjs"
+        // JEST_PUPPETEER_CONFIG: "jest-puppeteer.config.cjs"
       }
     );
   // Stringify all values so we can feed into webpack DefinePlugin

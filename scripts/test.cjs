@@ -48,5 +48,6 @@ if (
   argv.push(hasSourceControl ? '--watch' : '--watchAll');
 }
 
+// argv.push('-c ../../jest.config.cjs')
 
 jest.run(argv);

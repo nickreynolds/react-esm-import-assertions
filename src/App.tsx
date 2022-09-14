@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          Uses Import Assertion to Load JSON
+          Uses <b>Import</b> Assertion to Load JSON
         </p>
         <p>
           {`test: ${JSON.stringify(test)}`}

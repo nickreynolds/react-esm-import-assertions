@@ -71,7 +71,8 @@
   "scripts": {
     "start": "node scripts/start.cjs",
     "build": "node scripts/build.cjs",
-    "test": "node scripts/test.cjs"
+    "test": "node scripts/test.cjs",
+    "test:browser": "cross-env JEST_PUPPETEER_CONFIG=jest-puppeteer.config.cjs jest -c ./jest.config.cjs"
   },
   "eslintConfig": {
     "extends": [
@@ -110,7 +111,9 @@
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
-    "testEnvironment": "jsdom",
+    "globalSetup": "./setup.cjs",
+    "globalTeardown": "./teardown.cjs",
+    "testEnvironment": "'./puppeteer_environment.cjs",
     "transform": {
       "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.cjs",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.cjs",
@@ -141,7 +144,8 @@
       "jest-watch-typeahead/filename",
       "jest-watch-typeahead/testname"
     ],
-    "resetMocks": true
+    "resetMocks": true,
+    "projectConfig": {}
   },
   "babel": {
     "presets": [
@@ -154,7 +158,11 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "fs": "^0.0.1-security",
+    "jest-environment-node": "^29.0.3",
+    "jest-environment-puppeteer": "^6.1.1",
     "jest-puppeteer": "^6.1.1",
+    "os": "^0.1.2",
     "puppeteer": "^17.1.3"
   }
 }
