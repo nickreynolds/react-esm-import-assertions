@@ -140,7 +140,8 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      "@babel/preset-env"    
     ],
     "plugins": [
       "@babel/plugin-syntax-import-assertions"
