@@ -16,9 +16,12 @@ module.exports = {
     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
     "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
   ],
-  globalSetup: './setup.cjs',
-  globalTeardown: './teardown.cjs',
-  testEnvironment: './puppeteer_environment.cjs',
+  globalSetup: 'jest-environment-puppeteer/setup',
+  globalTeardown: 'jest-environment-puppeteer/teardown',
+  testEnvironment: 'jest-environment-puppeteer',
+  // globalSetup: './setup.cjs',
+  // globalTeardown: './teardown.cjs',
+  // testEnvironment: './puppeteer_environment.cjs',
   "transform": {
     "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.cjs",
     "^.+\\.css$": "<rootDir>/config/jest/cssTransform.cjs",

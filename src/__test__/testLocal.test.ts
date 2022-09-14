@@ -1,7 +1,5 @@
 describe('Ok', () => {
-    let page
     beforeAll(async () => {
-        page = await global.__BROWSER__.newPage()
         await page.goto('http://localhost:3000')
         console.log("page: ", page)
     })
