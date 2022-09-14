@@ -13,7 +13,7 @@ if (!NODE_ENV) {
     'The NODE_ENV environment variable is required but was not specified.'
   );
 }
-console.log("NODE_ENV: ", NODE_ENV)
+// console.log("NODE_ENV: ", NODE_ENV)
 // https://github.com/bkeepers/dotenv#what-other-env-files-can-i-use
 const dotenvFiles = [
   `${paths.dotenv}.${NODE_ENV}.local`,
@@ -88,6 +88,7 @@ function getClientEnvironment(publicUrl) {
         // Whether or not react-refresh is enabled.
         // It is defined here so it is available in the webpackHotDevClient.
         FAST_REFRESH: process.env.FAST_REFRESH !== 'false',
+        JEST_PUPPETEER_CONFIG: 'jest-puppeteer.config.cjs'
         // JEST_PUPPETEER_CONFIG: "jest-puppeteer.config.cjs"
       }
     );

@@ -5,4 +5,4 @@
 import '@testing-library/jest-dom';
 
 console.log("setupTests.")
-console.log("env: ", process.env)
+// console.log("env: ", process.env)

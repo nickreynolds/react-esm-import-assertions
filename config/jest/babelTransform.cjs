@@ -21,8 +21,8 @@ module.exports = babelJest.createTransformer({
     "@babel/preset-env"
   ],
   "plugins": [
+    "@babel/plugin-transform-react-jsx",
     "@babel/plugin-syntax-import-assertions"
   ],
   babelrc: false,
-  configFile: false,
 });

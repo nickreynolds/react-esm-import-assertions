@@ -10,7 +10,7 @@ const DIR = path.join(os.tmpdir(), 'jest_puppeteer_global_setup')
 class PuppeteerEnvironment extends NodeEnvironment {
   constructor(config) {
     console.log("config: ", config)
-    super(config)
+    super({ projectConfig: config })
   }
 
   async setup() {

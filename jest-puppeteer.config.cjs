@@ -1,11 +1,10 @@
 // jest-puppeteer.config.cjs
+console.log("puppeteer config inside.")
 module.exports = {
-  launch: {
-    dumpio: true,
-    headless: process.env.HEADLESS !== 'false',
-  },
   server: {
-    command: 'yarn start',
-    port: 4444,
+    command: 'npm run start',
+    port: 3000,
+    launchTimeout: 10000,
+    debug: true,
   },
 }
